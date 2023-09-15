@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-externalname-service
+spec:
+  type: ExternalName
+  externalName: example.com  # Replace with the DNS name you want to resolve
+
