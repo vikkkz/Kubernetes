@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: git-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: git
+  template:
+    metadata:
+      labels:
+        app: git
+    spec:
+      containers:
+      - name: git
+        image: alpine/git
+        command: ["sleep", "infinity"]
+
